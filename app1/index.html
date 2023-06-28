@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App #1</title>
+    <style>
+        html,
+        body,
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        div.poc-container {
+            width: 100%;
+            max-width: 1024px;
+            padding: 1rem;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poc-container">
+        <h1>Welcome to App #1</h1>
+        <p>Please follow this steps to test chat session restoration between different apps that share same domain:</p>
+        <ol>
+            <li>Start a chat session.</li>
+            <li>Send some text messages to keep track of conversation for testing purposes.</li>
+            <li><a href="http://app2.localtest.me:8080/app2">Navigate to App #2</a> to make sure the chat session has been restored successfully.</li>
+        </ol>
+        <p>This app uses the following script to load the chat:</p>
+        <code><pre id="preview"></pre></code>
+    </div>
+    <script src="../script.js"></script>
+    <script>
+        fetch('../script.js').then(function (res) {
+            return res.text();
+        }).then(function (script) {
+            document.querySelector('#preview').textContent = script;
+        });
+    </script>
+</body>
+
+</html>

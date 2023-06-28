@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App #2</title>
+    <style>
+        html,
+        body,
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        div.poc-container {
+            width: 100%;
+            max-width: 1024px;
+            padding: 1rem;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poc-container">
+        <h1>Welcome to App #2</h1>
+        <a href="http://app1.localtest.me:8080/app1">Go back to App #1</a>
+        <p>This is an entirely different page than the previous one but uses the same script to load the chat:</p>
+        <code><pre id="preview"></pre></code>
+    </div>
+    <script src="../script.js"></script>
+    <script>
+        fetch('../script.js').then(function (res) {
+            return res.text();
+        }).then(function (script) {
+            document.querySelector('#preview').textContent = script;
+        });
+    </script>
+</body>
+
+</html>

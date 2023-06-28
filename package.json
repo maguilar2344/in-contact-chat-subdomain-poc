@@ -1,0 +1,22 @@
+{
+  "name": "in-contact-chat-subdomain-poc",
+  "version": "1.0.0",
+  "description": "This is a proof of concept to test the implementation of BrandEmbassy chat by keeping alive a given chat session across different applications in subdomains.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maguilar2344/in-contact-chat-subdomain-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maguilar2344/in-contact-chat-subdomain-poc/issues"
+  },
+  "homepage": "https://github.com/maguilar2344/in-contact-chat-subdomain-poc#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
